@@ -9,30 +9,52 @@
   </head>
   <body>
     <div class="container-fluid">
-      <div class="col-md-8">
-        <h1>Ping Pong</h1>
-
-        <form id="userInput">
-          <div class="form-group">
-            <label for="string">Enter a number:</label>
-            <input id="inputString" type="text">
+      <div class="row">
+        <div class="col-md-8">
+          <h1>Ping Pong</h1>
+          <p id="biggerP">Number counter and replacer</p>
+          <p id="explain">This form will count from 1 to the number you input, changing certain values.</p>
+          <p class="rules">Any number it encounters that is divisble by 3 will become "PING"</p>
+          <p class="rules">Any number it encounters that is divisble by 5 will become "PONG"</p>
+          <p class="rules">Any number it encounters that is divisble by 15 will become "PINGPONG"</p>
+          <form id="userInput">
+            <div class="form-group">
+              <label for="string">Enter a number:</label>
+              <input id="inputString" type="number">
+            </div>
+            <button type="submit" class="btn btn-primary ">Count</button>
+          </form>
+          <form id="resetPage">
+            <button type="submit" class="btn btn-warning">Try another number!</button>
+          </form>
+        </div>
+        <div class="col-md-4">
+          <div class="well sidebar">
+            <p>Get your ping, pong, or pingpong here!</p>
           </div>
-          <button type="submit" class="btn btn-primary ">Count</button>
-        </form>
-        <form id="resetPage">
-          <button type="submit" class="btn btn-warning">Try another number!</button>
-        </form>
-        <div id="result">
+        </div>
+      </div>
+      <div class="row">
+        <div id="result" class="col-md-3">
           <ul id="resultDisplay">
           </ul>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="well sidebar">
-          <p>Get your ping, pong, or pingpong here!</p>
+        <div id="result2" class="col-md-3">
+          <ul id="resultDisplay2">
+          </ul>
+        </div>
+        <div id="result3" class="col-md-3">
+          <ul id="resultDisplay3">
+          </ul>
+        </div>
+        <div id="result4" class="col-md-3">
+          <ul id="resultDisplay4">
+          </ul>
         </div>
       </div>
     </div>
+
+
 
 
   </body>

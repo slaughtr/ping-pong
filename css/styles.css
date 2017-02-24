@@ -11,6 +11,7 @@
 .pingpong {
   background-color: yellow;
   display: none;
+  color: black;
 }
 
 .number {
@@ -40,4 +41,18 @@ body, html {
 
 .sidebar {
   color: black;
+}
+
+#biggerP {
+  font-size: 26px;
+  font-weight: bolder;
+}
+
+#explain {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.rules {
+  color: lightgrey;
 }

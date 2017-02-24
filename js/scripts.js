@@ -33,10 +33,25 @@ $(document).ready(function(){
   $("form#userInput").submit(function(){
     event.preventDefault();
     var value = $("#inputString").val();
+    var index = 0;
     inputToArray(value);
+
     countingArray.forEach(function(output){
-      $("#resultDisplay").append("<li " + output + "</li>");
+      var lengthFourth = countingArray.length/4;
+      var lengthHalf = countingArray.length/2;
+      var lengthThreeQuarters = (countingArray.length-lengthFourth);
+      if (index < lengthFourth) {
+        $("#resultDisplay").append("<li " + output + "</li>");
+      } else if ((index >= lengthFourth) && (index < lengthHalf)) {
+        $("#resultDisplay2").append("<li " + output + "</li>");
+      } else if ((index >= lengthHalf) && (index < lengthThreeQuarters)) {
+        $("#resultDisplay3").append("<li " + output + "</li>");
+      } else {
+        $("#resultDisplay4").append("<li " + output + "</li>");
+      }
+      index++;
     });
+    
     $(".ping").slideDown(1000);
     $(".pong").show(2222);
     $(".pingpong").fadeIn(1212);
