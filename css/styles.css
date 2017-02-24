@@ -1,0 +1,43 @@
+.ping {
+  background-color: orange;
+  display: none;
+}
+
+.pong {
+  background-color: red;
+  display: none;
+}
+
+.pingpong {
+  background-color: yellow;
+  display: none;
+}
+
+.number {
+  background-color: brown;
+  color: black;
+  display: none;
+}
+
+li {
+  width: 200px;
+  /*margin: 0 auto;*/
+}
+
+body, html {
+  background-color: black;
+  color: white;
+}
+
+.container {
+  background-color: black;
+  color: white;
+}
+
+#inputString {
+  color: red;
+}
+/*
+#resultDisplay {
+  display: none;
+}*/
