@@ -20,32 +20,27 @@ function convertToPingPong() { //convert array items to ping/pong/pingpong
       countingArray[index] = "\u00B0PONG\u00B0";
     }
     index++;
-    console.log(countingArray);
   });
   convertArrayToList();
 }
 
-function convertArrayToList(input) {
+function convertArrayToList(input) { //this is the bit that outputs the items onto the page
   countingArray.forEach(function(output){
     $("#resultDisplay").append("<li class='output'>" + output + "</li>");
   });
 }
 
-
-
-
-
 //user interface logic
 $(document).ready(function(){
 
   $("form#resetPage").submit(function(){
-    //I can't get it to reset my list any other way.
+    //I can't get it to reset my list any other way. all .remove, .empty, etc functions are non-operational. So, let's not prevent that default, I guess.
   });
 
   $("form#userInput").submit(function(){
-
     event.preventDefault();
     var value = $("#inputString").val();
+
 
     inputToArray(value);
   });
