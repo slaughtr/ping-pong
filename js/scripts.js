@@ -26,9 +26,8 @@ function convertToPingPong() { //convert array items to ping/pong/pingpong
 }
 
 function convertArrayToList(input) {
-  // $("ul#resultDisplay").html("<li>Here we go</li>")
   countingArray.forEach(function(output){
-    $("#result").append("<div id='output'>" + output + "</div>");
+    $("#resultDisplay").append("<li class='output'>" + output + "</li>");
   });
 }
 
@@ -38,15 +37,16 @@ function convertArrayToList(input) {
 
 //user interface logic
 $(document).ready(function(){
+
+  $("form#resetPage").submit(function(){
+    //I can't get it to reset my list any other way.
+  });
+
   $("form#userInput").submit(function(){
-
-    // var displayUL = document.getElementById("resultDisplay");
-    // displayUL.innerHTML = '';
-
-  // $("ul#resultDisplay").html("<li>Here we go</li>");
 
     event.preventDefault();
     var value = $("#inputString").val();
+
     inputToArray(value);
   });
 });
