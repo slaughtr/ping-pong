@@ -20,6 +20,9 @@
   display: none;
 }
 
+ul {
+  margin-top: 10px;
+}
 li {
   width: 200px;
   /*margin: 0 auto;*/
@@ -53,6 +56,15 @@ body, html {
   font-weight: bold;
 }
 
+#byline, #byline a {
+  font-family: sans-serif;
+  font-size: 26px;
+  color: red;
+}
 .rules {
   color: lightgrey;
+}
+
+button {
+  float: left;
 }
