@@ -1,21 +1,21 @@
 .ping {
-  background-color: orange;
+  background-color: #aad6ff;
   display: none;
 }
 
 .pong {
-  background-color: red;
+  background-color: #b3eea1;
   display: none;
 }
 
 .pingpong {
-  background-color: yellow;
+  background-color: #c3669e;
   display: none;
   color: black;
 }
 
 .number {
-  background-color: brown;
+  background-color: #dbacac;
   color: black;
   display: none;
 }
@@ -29,12 +29,12 @@ li {
 }
 
 body, html {
-  background-color: black;
+  background-color: #af6ecc;
   color: white;
 }
 
 .container {
-  background-color: black;
+  background-color: #af6ecc;
   color: white;
 }
 
