@@ -37,7 +37,7 @@ body, html {
 #inputString {
   color: red;
 }
-/*
-#resultDisplay {
-  display: none;
-}*/
+
+.sidebar {
+  color: black;
+}

@@ -9,21 +9,28 @@
   </head>
   <body>
     <div class="container-fluid">
-      <h1>Ping Pong</h1>
+      <div class="col-md-8">
+        <h1>Ping Pong</h1>
 
-      <form id="userInput">
-        <div class="form-group">
-          <label for="string">Enter a number:</label>
-          <input id="inputString" type="text">
+        <form id="userInput">
+          <div class="form-group">
+            <label for="string">Enter a number:</label>
+            <input id="inputString" type="text">
+          </div>
+          <button type="submit" class="btn btn-primary ">Count</button>
+        </form>
+        <form id="resetPage">
+          <button type="submit" class="btn btn-warning">Try another number!</button>
+        </form>
+        <div id="result">
+          <ul id="resultDisplay">
+          </ul>
         </div>
-        <button type="submit" class="btn btn-primary ">Count</button>
-      </form>
-      <form id="resetPage">
-        <button type="submit" class="btn btn-warning">Try another number!</button>
-      </form>
-      <div id="result">
-        <ul id="resultDisplay">
-        </ul>
+      </div>
+      <div class="col-md-4">
+        <div class="well sidebar">
+          <p>Get your ping, pong, or pingpong here!</p>
+        </div>
       </div>
     </div>
 
