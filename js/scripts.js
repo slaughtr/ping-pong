@@ -6,21 +6,29 @@ function inputToArray(inputNumber) { //make input into array
   for (var i = 1; i <= inputNumber; i++) {
     countingArray.push(i);
   }
-  convertToPingPong();
+  return convertToPingPong();
 }
 
 function convertToPingPong() { //convert array items to ping/pong/pingpong
   var index = 0;
   countingArray.forEach(function(number) {
-    if (number % 3 === 0) {
-      countingArray[index] = "ping";
-      console.log("div by 3!");
+    if (number % 15 === 0) {
+      countingArray[index] = "\u221EPINGPONG\u221E";
+    } else if (number % 3 === 0) {
+      countingArray[index] = "\u2022PING\u2022";
     } else if (number % 5 === 0) {
-      countingArray[index] = "pong";
-      console.log("div by 5!");
+      countingArray[index] = "\u00B0PONG\u00B0";
     }
     index++;
     console.log(countingArray);
+  });
+  convertArrayToList();
+}
+
+function convertArrayToList(input) {
+  // $("ul#resultDisplay").html("<li>Here we go</li>")
+  countingArray.forEach(function(output){
+    $("#result").append("<div id='output'>" + output + "</div>");
   });
 }
 
@@ -31,9 +39,14 @@ function convertToPingPong() { //convert array items to ping/pong/pingpong
 //user interface logic
 $(document).ready(function(){
   $("form#userInput").submit(function(){
+
+    // var displayUL = document.getElementById("resultDisplay");
+    // displayUL.innerHTML = '';
+
+  // $("ul#resultDisplay").html("<li>Here we go</li>");
+
     event.preventDefault();
     var value = $("#inputString").val();
-    $("#result").show();
-    $("#resultDisplay").append("<li>" + inputToArray(value) + "</li>");
+    inputToArray(value);
   });
 });
